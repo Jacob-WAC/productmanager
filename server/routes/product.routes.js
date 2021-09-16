@@ -4,4 +4,6 @@ module.exports = function (app) {
     app.post("/api/new", ProductController.createProduct);
     app.get("/api/products", ProductController.getAllProduct);
     app.get("/api/products/:id", ProductController.getProduct);
+    app.put("/api/products/:id", ProductController.updateProduct);
+    app.delete("/api/products/:id", ProductController.deleteProduct);
 };

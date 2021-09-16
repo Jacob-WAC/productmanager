@@ -20,7 +20,9 @@ const Main = (props) => {
         <div>
             <ProductForm setLoaded={setLoaded} />
             <hr />
-            {loaded && <ProductList products={products} />}
+            {loaded && (
+                <ProductList products={products} setLoaded={setLoaded} />
+            )}
         </div>
     );
 };

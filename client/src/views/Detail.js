@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
@@ -14,7 +15,12 @@ const Detail = (props) => {
             .catch((err) => console.error(err));
     }, []);
 
-    return <div>{product.title}</div>;
+    return (
+        <div>
+            {product.title}
+            <Link to={`/products/edit/${product._id}`}>Edit</Link>
+        </div>
+    );
 };
 
 export default Detail;
